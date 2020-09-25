@@ -1,10 +1,8 @@
 package com.cbt.tests;
 
-import com.cbt.utilities.BrowserFactory;
+import com.cbt.utilities.WebDriverFactory;
 import com.cbt.utilities.StringUtility;
 import org.openqa.selenium.WebDriver;
-
-import java.util.Arrays;
 
 public class NavigationTests {
 
@@ -33,7 +31,7 @@ public class NavigationTests {
 
     }
     public static void runBrowser(String browserType){
-        WebDriver driver = BrowserFactory.getDriver(browserType);
+        WebDriver driver = WebDriverFactory.getDriver(browserType);
         driver.get("https://google.com");
         String expectedGoogleTitle = driver.getTitle();
         driver.get("https://etsy.com");
